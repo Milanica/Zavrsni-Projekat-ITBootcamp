@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class HumanityMenu {
+
 	public static final String URL = "https://humanit.humanity.com/app/dashboard/";
 	private static final String DASHBOARD_XPATH = "//a[@id='sn_dashboard']//span[@class='primNavQtip__inner']";
 	private static final String SHIFT_PLANNING_XPATH = "//p[contains(text(),'ShiftPlanning')]";
@@ -14,6 +15,7 @@ public class HumanityMenu {
 	private static final String STAFF_XPATH = "//p[contains(text(),'Staff')]";
 	private static final String PLAYROLL_XPATH = "//a[@id='sn_payroll']//span[@class='primNavQtip__inner']";
 	private static final String REPORT_XPATH = "//i[@class='primNavQtip__icon icon-chart']";
+	private static final String SETTINGS_BAR_XPATH = "//i[@class='primNavQtip__icon icon-gear']";
 
 	// pristup dashboard button-u
 	public static WebElement getDashboard(WebDriver driver) {
@@ -93,5 +95,15 @@ public class HumanityMenu {
 	// metoda za klik na report dugme
 	public static void clickReport(WebDriver driver) {
 		getReport(driver).click();
+	}
+
+	// pristup Settings buttonu u gornjem meniju
+	public static WebElement getSettingsBTN(WebDriver driver) {
+		return driver.findElement(By.xpath(SETTINGS_BAR_XPATH));
+	}
+
+	// metoda za klik na Settings button u gornjem meniju
+	public static void clickSettingsBTN(WebDriver driver) {
+		getSettingsBTN(driver).click();
 	}
 }
