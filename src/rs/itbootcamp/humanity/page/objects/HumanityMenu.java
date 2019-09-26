@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class HumanityMenu {
 
-	public static final String URL = "https://humanit.humanity.com/app/dashboard/";
+	public static final String URL2 = "https://humanit.humanity.com/app/dashboard/";
 	private static final String DASHBOARD_XPATH = "//a[@id='sn_dashboard']//span[@class='primNavQtip__inner']";
 	private static final String SHIFT_PLANNING_XPATH = "//p[contains(text(),'ShiftPlanning')]";
 	private static final String TIME_CLOCK_XPAT = "//p[contains(text(),'Time Clock')]";

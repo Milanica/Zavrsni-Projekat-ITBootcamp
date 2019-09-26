@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class HumanityEditStaff {
-	public static final String URL = "https://humanit.humanity.com/app/staff/list/load/true/";
+	public static final String URL3 = "https://humanit.humanity.com/app/staff/list/load/true/";
 	private static final String STAFF_XPATH = "//p[contains(text(),'Staff')]";
 	private static final String EDIT_DETAILS_XPATH = "//a[contains(text(),'Edit Details')]";
 	private static final String UPLOAD_PICTURE_XPATH = "//input[@id='fileupload']";

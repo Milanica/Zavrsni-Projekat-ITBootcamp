@@ -1,6 +1,8 @@
 package rs.itbootcamp.humanity.page.tests;
 
-public class HumanityAddNewEmployeeTests {
+
+	public class HumanityAddNewEmployeeTests {
 	
+	}
+
 	
-}

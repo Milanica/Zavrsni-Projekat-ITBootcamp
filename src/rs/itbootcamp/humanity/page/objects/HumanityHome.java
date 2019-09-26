@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 public class HumanityHome {
 	
-		public static final String URL = "https://www.humanity.com";
+		public static final String URL1 = "https://www.humanity.com";
 		private static final String ABOUT_US_XPATH = "//a[@class='nav-link no-before'][contains(text(),'About us')]";
 		private static final String LOGIN_BTN1_XPATH = "//p[contains(text(),'LOGIN')]";
 		private static final String USERNAME_XPATH = "//input[@id='email']";

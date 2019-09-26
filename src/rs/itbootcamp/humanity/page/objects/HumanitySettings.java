@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class HumanitySettings {
 
-	public static final String URL = "https://humanit.humanity.com/app/admin/settings/";
+	public static final String URL4 = "https://humanit.humanity.com/app/admin/settings/";
 	private static final String SETTINGS_BAR_XPATH = "//i[@class='primNavQtip__icon icon-gear']";
 	private static final String SELECT_COUNTRY_XPATH = "//select[@id='country']";
 	private static final String DEFAULT_LANGUAGE_XPATH = "//select[@id='country']";

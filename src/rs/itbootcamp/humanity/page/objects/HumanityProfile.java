@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class HumanityProfile {
 
-	public static final String URL = "https://humanit.humanity.com/app/dashboard/";
+	public static final String URL2 = "https://humanit.humanity.com/app/dashboard/";
 	private static final String AVATAR_XPATH = "//img[@id='tr_avatar']";
 	private static final String SELECT_OPTION_XPATH = "//i[@class='icon icon-arrowFullDn j-arrowIconToAvatar navBottom__userArrow']";
 	private static final String PROFILE_BTN_XPATH = "//a[contains(text(),'Profile')]";
