@@ -13,9 +13,9 @@ public class HumanityProfile {
 	private static final String PROFILE_BTN_XPATH = "//a[contains(text(),'Profile')]";
 	private static final String SETTINGS_BTN_XPATH = "//div[@class='userm userm-mainPage']//a[contains(text(),'Settings')]";
 	private static final String AVAILABILITY_BTN_XPATH = "//div[@class='userm userm-mainPage']//a[contains(text(),'Availability')] ";
-    private static final String SIGNOUT_BTN_XPATH = "//a[contains(text(),'Sign Out')]";
-    private static final String APP_VERSION_XPATH = "//b[contains(text(),'9.5.5')]";
-    
+	private static final String SIGNOUT_BTN_XPATH = "//a[contains(text(),'Sign Out')]";
+	private static final String APP_VERSION_XPATH = "//b[contains(text(),'9.5.5')]";
+
 	// metoda da se pristupi avataru
 	public static WebElement getAvatar(WebDriver driver) {
 		return driver.findElement(By.xpath(AVATAR_XPATH));
@@ -26,7 +26,7 @@ public class HumanityProfile {
 		getAvatar(driver).click();
 	}
 
-	//  drop down option ( klik na strelicu opadajuci meni)
+	// drop down option ( klik na strelicu opadajuci meni)
 	public static WebElement getDropDownMenu(WebDriver driver) {
 		return driver.findElement(By.xpath(SELECT_OPTION_XPATH));
 	}
@@ -44,6 +44,7 @@ public class HumanityProfile {
 	// medoda za klik na Profile polje
 	public static void clickProfile(WebDriver driver) {
 		getProfile(driver).click();
+	
 	}
 
 	// metoda da se pristupi polju Settings
@@ -65,18 +66,20 @@ public class HumanityProfile {
 	public static void clickAvailability(WebDriver driver) {
 		getAvailability(driver).click();
 	}
+
 	// metoda da se pristupi polju Sign out
-		public static WebElement getSignOut(WebDriver driver) {
-			return driver.findElement(By.xpath(SIGNOUT_BTN_XPATH));
-		}
+	public static WebElement getSignOut(WebDriver driver) {
+		return driver.findElement(By.xpath(SIGNOUT_BTN_XPATH));
+	}
 
 	// medoda za klik na dugme Sign out
-		public static void clickSignOut(WebDriver driver) {
-			getSignOut(driver).click();
-		}
+	public static void clickSignOut(WebDriver driver) {
+		getSignOut(driver).click();
+	}
+
 	// metoda da se pristupi verziji aplikacije
-		public static WebElement getAppVersion(WebDriver driver) {
-		    return driver.findElement(By.xpath(APP_VERSION_XPATH));
-		}
+	public static WebElement getAppVersion(WebDriver driver) {
+		return driver.findElement(By.xpath(APP_VERSION_XPATH));
+	}
 
 }

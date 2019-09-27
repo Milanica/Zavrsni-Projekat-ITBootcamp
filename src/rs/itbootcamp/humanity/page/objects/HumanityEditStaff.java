@@ -40,8 +40,9 @@ public class HumanityEditStaff {
 
 
 	// Upload picture
-	public static void uploadPicuture(WebDriver driver, String inputText) {
+	public static void uploadPicuture(WebDriver driver) throws InterruptedException {
 		getUploadPicture(driver).sendKeys(PICTURE_PICPATH);
+        Thread.sleep(3000);
 	}
 
 	// pristup za nickname

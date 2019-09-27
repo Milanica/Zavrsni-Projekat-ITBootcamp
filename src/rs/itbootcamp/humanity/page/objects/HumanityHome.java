@@ -44,8 +44,8 @@ public class HumanityHome {
 		}
 
 		// unosenje username-a u polje
-		public static void fillUsernameInput(WebDriver driver, String inputText) {
-			getUsernameInput(driver).sendKeys(inputText);
+		public static void fillUsernameInput(WebDriver driver, String data) {
+			getUsernameInput(driver).sendKeys(data);
 		}
 
 		// pristup polju password
@@ -57,8 +57,8 @@ public class HumanityHome {
 		}
 
 		// metoda za unosenje passworda u polje
-		public static void fillPasswordInput(WebDriver driver, String inputText) {
-			getPasswordInput(driver).sendKeys(inputText);
+		public static void fillPasswordInput(WebDriver driver, String data) {
+			getPasswordInput(driver).sendKeys(data);
 		}
 
 		// pristup za klik na dugme log in nakon unosenja lozinke i sifre
@@ -77,8 +77,8 @@ public class HumanityHome {
 		}
 
 		// metoda za unosenje full name-a u polje
-		public static void inputFullName(WebDriver driver, String inputText) {
-			getFullName(driver).sendKeys(inputText);
+		public static void inputFullName(WebDriver driver, String data) {
+			getFullName(driver).sendKeys(data);
 
 		}
 
@@ -88,8 +88,8 @@ public class HumanityHome {
 		}
 
 		// metoda za unosenje podataka work email-a u polje
-		public static void inputWorkEmail(WebDriver driver, String inputText) {
-			getFullName(driver).sendKeys(inputText);
+		public static void inputWorkEmail(WebDriver driver, String data) {
+			getFullName(driver).sendKeys(data);
 		}
 
 		// start my free trial polje

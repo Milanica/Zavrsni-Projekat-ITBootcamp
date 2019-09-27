@@ -26,30 +26,28 @@ public class HumanityAddNewEmployeeTestNG {
 		HumanityHome.clickLoginButton(driver); //klikne na log in pocetno dugme
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		HumanityHome.clickUsernameInput(driver);; //klikne na "Email/Username" polje
-		HumanityHome.fillUsernameInput(driver, "Milana"); //ukuca email ili username
+		HumanityHome.fillUsernameInput(driver, "nolarine@coin-host.net"); //ukuca email ili username
 		HumanityHome.clickPasswordInput(driver); //klikne na password
 		HumanityHome.fillPasswordInput(driver, "dobardan"); //ukuca password
 		HumanityHome.clickLoginBTN1(driver); //klikne login button i submituje
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		Thread.sleep(5000);
 		HumanityMenu.clickStaff(driver); //klikne na "Staff" button
-		HumanityStaff.clickAddEmployeeButton(driver); //clicks on the "Add Employees" button
-		HumanityStaff.inputEmployeesLastName(driver, n, textInput);//inputs the First name in the "First Name" field			
-		HumanityStaff.inputEmployeesLastName(driver, n, textInput); //inputs the Last name in the "Last Name" field
-		HumanityStaff.inputEmployeesEmail(driver, n, textInput);//inputs email in the "Email" field
-		HumanityStaff.clickSaveEmployeesButton(driver); //clicks on the "Save Employees" button
-						
-		driver.navigate().back(); //returns the browser one page back
-		driver.navigate().back(); //returns the browser to the "staff" page
-		
-		//makes a list of all elements that have xpath containing the name of the new employee
-		List<WebElement> list = driver.findElements(By.xpath("//*[contains(text(),'" + "Predrag Predragovic" + "')]"));
-		Assert.assertTrue(list.size() > 0, "Text not found!"); //checks if the list has any items, if it does, the employee was successfully added
-		
-		}catch (AssertionError ae) {
+		HumanityStaff.clickAddEmployeeButton(driver); //klikne na  "Add Employees" button
+
+		HumanityStaff.inputEmployeesFirstName(driver, "Ivana", 1);
+		HumanityStaff.inputEmployeesLastName(driver, "Peric", 1);
+		HumanityStaff.inputEmployeesEmail(driver, 	"ivanica1234gh@gmail.com", 1);
+		HumanityStaff.clickSaveEmployeesButton(driver);
+		Thread.sleep(3000);
+		driver.get(HumanityStaff.URL3);
+		List<WebElement> list = driver.findElements(By.xpath("//a[contains(text(),'ivana Peric')]"));
+		Assert.assertTrue(list.size() > 0, "Tekst nije pronadjen!"); 
+	
+	}catch (AssertionError ae) {
 			Assert.fail();
 			System.out.println(ae.getMessage());
-		}finally {
+	}finally {
 			
 			driver.quit(); //closes the Browser
 		}

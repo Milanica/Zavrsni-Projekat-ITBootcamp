@@ -42,11 +42,11 @@ public class HumanityStaff {
 	public static WebElement getEmployeesFirstName(WebDriver driver, int n) {
 		return driver.findElement(By.xpath(FIRSTNAME_START_XPATH + n + END_XPATH)); // ovde sam spojila stringove , n je
 																					// jedino stose razlikuje kod svakog
-																					// zaposleno
+																					// zaposlenog
 	}
 
-	public static void inputEmployeesFirstName(WebDriver driver, int n, String textInput) {
-		getEmployeesLastName(driver, n).sendKeys("Milana");
+	public static void inputEmployeesFirstName(WebDriver driver, String data, int n) {
+		getEmployeesFirstName(driver,n).sendKeys(data);
 	}
 
 	// dodavanje prezimena radniku
@@ -56,8 +56,8 @@ public class HumanityStaff {
 
 	}
 
-	public static void inputEmployeesLastName(WebDriver driver, int n, String textInput) {
-		getEmployeesLastName(driver, n).sendKeys("Stefanovic");
+	public static void inputEmployeesLastName(WebDriver driver, String data, int n) {
+		getEmployeesLastName(driver, n).sendKeys(data);
 	}
 	// dodavanje email adrese
 
@@ -66,8 +66,8 @@ public class HumanityStaff {
 
 	}
 
-	public static void inputEmployeesEmail(WebDriver driver, int n, String textInput) {
-		getEmployeesEmail(driver, n).sendKeys("nolarine@coin-host.net");
+	public static void inputEmployeesEmail(WebDriver driver,  String data, int n) {
+		getEmployeesEmail(driver, n).sendKeys(data);
 
 	}
 
